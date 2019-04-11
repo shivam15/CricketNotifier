@@ -3,15 +3,13 @@ import bs4 as bs
 import urllib.request
 import time
 import math
-six = 0
-curr = 0
 over = 0
 over1 = 0
-upgrade = "https://www.cricbuzz.com/live-cricket-scores/22460/rajasthan-vs-chennai-25th-match-indian-premier-league-2019"
+url = "https://www.cricbuzz.com/live-cricket-scores/22460/rajasthan-vs-chennai-25th-match-indian-premier-league-2019"
 n = Notifier()
 while True:
-    sauce=urllib.request.urlopen(upgrade).read()
-    soup=bs.BeautifulSoup(sauce,'lxml')
+    sp =urllib.request.urlopen(url).read()
+    soup=bs.BeautifulSoup(sp,'lxml')
     hd = soup.find('h1',{"class":"cb-nav-hdr cb-font-18 line-ht24"})
     header = hd.text.split(",", 1)
     link="cb-font-20 text-bold"
