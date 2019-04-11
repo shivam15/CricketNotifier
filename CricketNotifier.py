@@ -21,9 +21,9 @@ while True:
         over1 = over
         over = s.split(" ",1)[0]
     except Exception as e:
-        print('out, waiting for new player info')
-        time.sleep(10)
+        print('Exception occured')
+        time.sleep(5)
         continue
     if(math.ceil(float(over))-(float(over)) == 0 and over!=over1):
         n.show_toast("Match Info-"+str(header[0]),span[0].text,6)
-    time.sleep(3)
+    time.sleep(10)
